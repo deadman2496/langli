@@ -40,6 +40,7 @@ export const lessonsRelations = relations(lessons, ({ one, many }) => ({
         fields: [lessons.unitId],
         references: [units.id],
     }),
+    challenges: many(challenges),
 }));
 
 export const challengesEnum = pgEnum("type", ["SELECT", "ASSIST"]);
